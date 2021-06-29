@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/switchHummus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hummus"
+        app:layout_constraintBottom_toTopOf="@+id/switchTahini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPickles"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switchTahini"
+        android:layout_width="96dp"
+        android:layout_height="41dp"
+        android:text="@string/tahini"
+        app:layout_constraintBottom_toTopOf="@+id/editTextComments"
+        app:layout_constraintStart_toStartOf="@+id/switchHummus"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPickles"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:hint="Customer Name"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textPickles"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newOrder"
+        app:layout_constraintVertical_bias="0.306" />
+
+
+    <SeekBar
+        android:id="@+id/seekBarPickles"
+        android:layout_width="180dp"
+        android:layout_height="44dp"
+        android:max="10"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@id/switchHummus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintRight_toLeftOf="@id/textPickles"
+        app:layout_constraintStart_toEndOf="@+id/textPickles"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <EditText
+        android:id="@+id/editTextComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@id/switchTahini"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/newOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/new_order"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPickles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of pickles: 0"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@id/switchHummus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="30sp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60sp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FoodStand</string>
+    <string name="new_order">New Order</string>
+    <string name="customer_name">Customer Name:</string>
+    <string name="tahini">Tahini</string>
+    <string name="hummus">Hummus</string>
+    <string name="fetching_order">Fetching Order</string>
+</resources>
